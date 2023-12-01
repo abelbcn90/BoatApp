@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:mydb
+    #url: jdbc:h2:file:/data/demo
+    username: sa
+    #password: password
+    password: 
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+  h2:
+    console:
+      enabled: true
+
+boat:
+  app:
+    jwtCookieName: OWT
+    jwtSecret: ======================OWT=Spring===========================
+    jwtExpirationMs: 86400000
